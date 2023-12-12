@@ -4,8 +4,6 @@ package day03_excption;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import com.sun.org.apache.bcel.internal.generic.ArithmeticInstruction;
-
 /*
 public class ManinEntry {
 	public static void main(String[] args) {

@@ -1,4 +1,5 @@
 package Mytest;
+
 import java.util.Scanner;
 
 /*
@@ -111,7 +112,7 @@ public class seull {
 }
 */
 
-
+/*
 //homework 7
 
 public class seull{
@@ -142,6 +143,286 @@ public class seull{
 		}
 	}// main end
 }
+*/
+
+//homework 8
+
+/*
+public class seull{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int y,a=0,sum,num ;
+		num =sc.nextInt();
+		y = sc.nextInt();
+		int[] x = new int[num]; 
+		
+		for (int i = 0; i < num; i++) {
+			x[i] = sc.nextInt();
+		}
+		for (int i = 0; i < num; i++) {
+			for (int j = i+1; j < num; j++) {
+				for (int k = j+1; k < num; k++) {
+					sum=x[i]+x[j]+x[k];
+					if(y <= sum && sum <=y)
+						a=sum;
+						
+					
+				}
+				
+			}
+			
+		}// if end
+		System.out.println(a);
+		
+
+	}
+}
+*/
+
+
+
+//homework 9
+
+/*
+public class seull{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int su1=0;
+		int su2=0;
+		int a=0;
+		int x =sc.nextInt();
+		
+		int[] n1 = new int[x];
+		int[] n2 = new int[x];
+		
+		for (int i = 0; i < x; i++) {
+			n1[i] = sc.nextInt();
+			n2[i] = sc.nextInt();
+		
+			
+			for (int j = 0; j <45001; j++) {
+				for (int k= 0; k < 100; k++) {
+					su1=n1[i]*j;
+					su2=n2[i]*k;
+					if(su1 == su2) a= su1;
+					if(a!=0) break;
+				}
+			
+				
+			}
+			System.out.println(a);
+		}
+	}
+}
+*/
+
+
+//homework 10
+
+
+
+
+
+
+/*
+
+public class seull {
+	public static void main(String[] args) throws Exception {
+	
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int x =  Integer.parseInt(br.readLine());
+		int[] str = new int[x];
+        
+		System.out.println("숫자"+ x +" 개를 입력 하세요 : ");
+		for (int i = 0; i < x; i++) {
+			str[i] =  Integer.parseInt(br.readLine()); // 예외발생
+		}
+		Arrays.sort(str);
+		for (int i = 0; i < x; i++) {
+			System.out.println(str[i]);
+		}
+	}
+
+}
+
+*/
+
+
+
+
+
+
+
+/*
+ public class seull {
+	public static void main(String[] args) throws Exception {
+	
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		System.out.println("숫자 2개 입력 하세요 : ");
+		int str =  Integer.parseInt(br.readLine()); // 예외발생
+		int str2 =  Integer.parseInt(br.readLine());
+		
+//		int str3 =  System.in.read();
+		
+		System.out.println(str);
+		System.out.println(str2);
+		
+	
+	}
+
+}
+ */
+
+
+//homework 11
+/*
+public class seull{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Stack<Integer> n = new Stack<>();
+		int a;
+		System.out.println("명령 실행횟수를 입력하세요");
+		int num = sc.nextInt();
+		
+		for (int i = 0; i < num; i++) {
+		int x= sc.nextInt();
+			
+		switch (x) {
+		case 1: a = sc.nextInt();
+		n.push(a); break;
+		case 2: if(!n.isEmpty()) System.out.println(n.pop());
+		else System.out.println("-1"); break;
+		case 3: if(!n.isEmpty()) System.out.println(n.size());
+		else System.out.println("비어있슴"); break;
+		case 4: if(n.isEmpty()) System.out.println("1");
+		else System.out.println("0"); break;
+		case 5: if(!n.isEmpty()) System.out.println(n.peek());
+		else System.out.println("-1"); break;
+
+		default: System.out.println("1~5 까지만 입력해주세요.");
+			break;
+		}
+		}// for end
+	}
+}
+*/
+
+
+//homework 12
+
+/*
+
+public class seull{
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("학생수 입력 : ");
+		int n = sc.nextInt();
+		if(n>=1 && n<=100) {
+		System.out.println("상받을 인원 : ");
+		int k = sc.nextInt();
+		if(k>=1 && k<= n) {
+		Integer[] score = new Integer[n];
+		
+		for (int i = 0; i < n; i++) {
+			score[i] = sc.nextInt();
+			if(score[i] >=1 && score[i] <= 10000) {
+				
+			}else System.out.println("점수는 1이상 10000이하로 입력해주세요");
+			}// for end
+		Arrays.sort(score,Collections.reverseOrder());
+		System.out.println(score[k-1]);
+		}else System.out.println("상받을 1이상 인원은 학생수보다 적게 입력해주세요");
+		}//if end
+		else {System.out.println("학생수는 1~1000사이 입력해주세요");}
+		
+	}// main end
+} // class end
+*/
+
+/*
+public class seull{
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("학생수 입력 : ");
+		int n = sc.nextInt();
+		System.out.println("상받을 인원 : ");
+		int k = sc.nextInt();
+		Integer[] score = new Integer[n];
+		
+		for (int i = 0; i < n; i++) {
+			score[i] = sc.nextInt();
+		}// for end
+		Arrays.sort(score,Collections.reverseOrder());
+		System.out.println(score[k-1]);
+		
+	}// main end
+} // class end
+*/
+
+
+/*
+//homework 13
+
+public class seull{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int x =2;
+		int[] a = new int[200];
+		int[] b = new int[200];
+		
+		int[] n =new int[2];
+		for (int i = 0; i < 2; i++) {
+			n[i] = sc.nextInt();
+		}
+		for (int i = 0; i < n.length; i++) {
+			for (int j = 0; j < n[0]; j++) {
+				a[j]=sc.nextInt();	
+			}
+			for (int j = 0; j < n[1]; j++) {
+				b[j] = sc.nextInt();
+			}
+			if(a.equals(i)-b.equals(i))
+		}
+			
+		}
+	
+			
+			
+}
+*/
+
+
+//homework 14
+
+public class seull{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int x=5;
+		
+		System.out.println("숫자 하나를 입력해주세요 : ");
+		x= sc.nextInt();
+		if(x >= 0 && x <= 12)
+		System.out.println(fac(x));
+		else System.out.println("1~12까지의 숫자를 입력하세요.");
+	}
+	
+	public static int fac(int x){
+		if(x ==0) 
+			return 1;
+		else {
+			return x * fac(x-1);
+		}
+	}
+}
+
+
+
 
 
 
