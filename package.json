@@ -10,7 +10,7 @@
     "seull"
   ],
   "author": "seull",
-  "license": "ISC"
+  "license": "ISC",
   "bin": {
     "seull": "./index.js"
   }
