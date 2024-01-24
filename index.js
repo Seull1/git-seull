@@ -50,7 +50,10 @@ console.log( `
 ----------------------------------------------------------------------------------------------------
 `);
 
-
+if (argv.length < 4) {
+  console.log("사용법: node random-name.js 홍길동 임꺽정 이순신");
+  process.exit(1);
+}
 
 const arg=process.argv;
 const names = argv.slice(2).slice(0, -1);
