@@ -1,6 +1,6 @@
 {
   "name": "seull",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "seull",
   "main": "index.js",
   "scripts": {
@@ -11,4 +11,7 @@
   ],
   "author": "seull",
   "license": "ISC"
+  "bin": {
+    "seull": "./index.js"
+  }
 }
