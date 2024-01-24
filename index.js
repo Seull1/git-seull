@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 
-const a = `
+const x = `
                                        .......................
                                        .......::::::::::......
                                        .......--::::::::::....
@@ -58,9 +58,8 @@ const a = `
                                ..................................................
 	`;
 
-console.log(a);
+console.log(x);
 
 const args = process.argv.slice(2);
-var b = Math.floor(Math.random()*args.length);
-
-console.log("발표자: "+args[b]);
+var random = Math.floor(Math.random()*args.length);
+console.log("발표자 : " + args[random]);

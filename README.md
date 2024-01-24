@@ -53,3 +53,7 @@
 
 ```
 
+
+```
+$ npm i pysatellite
+```
