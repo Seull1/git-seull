@@ -53,7 +53,33 @@
 
 ```
 
+<h3>버전</h3>
+<p>npm : 10.2.4 </p>
+<p>nvm : 0.39.7 </p>
+
+<h3> How to Use </h3>
 
 ```
-$ npm i pysatellite
+$ npm i seull
 ```
+
+<p>발표자 랜덤 출력</p>
+
+```
+$ seull 김민성 타이거우즈 빌게이츠
+```
+
+![스크린샷 2024-01-25 191026](https://github.com/Seull1/git-seull/assets/148920003/1a63bd1e-05bf-4578-af0b-4be2e007b844)
+
+<h2>설명</h2>
+<p>index.js</p>
+<ul>
+<p>const args = process.argv.slice(2); </p>
+<p><< slice(2)을 통해process.argv에 기본적으로 들어가있는 node command의 full path 과 실행된 파일의 full path 를 제외한다</p>
+<br>
+  <p>var random = Math.floor(Math.random()*args.length);</p>
+ <p><< random 함수를 통해 내가 입력한 값의 랜덤한 값을 얻는다 </p>
+<br>
+<p>console.log("발표자 : " + args[random]);</p>
+  <p><< 출력</p>
+</ul>
