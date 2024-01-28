@@ -60,6 +60,17 @@ const x = `
 
 console.log(x);
 
-const args = process.argv.slice(2);
-var random = Math.floor(Math.random()*args.length);
-console.log("발표자 : " + args[random]);
+//const args = process.argv.slice(2);
+//var random = Math.floor(Math.random()*args.length);
+//console.log("발표자 : " + args[random]);
+
+f(process.argv.slice(2));
+function f(arg='민성',...args){
+let random = Math.floor(Math.random()*arg.length+Math.random()*args.length);
+console.log("발표자 : " + arg[random]);
+}
+
+
+
+
+
