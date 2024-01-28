@@ -64,13 +64,28 @@ console.log(x);
 //var random = Math.floor(Math.random()*args.length);
 //console.log("발표자 : " + args[random]);
 
-f(process.argv.slice(2));
-function f(arg='민성',...args){
-let random = Math.floor(Math.random()*arg.length+Math.random()*args.length);
-console.log("발표자 : " + arg[random]);
+//function f(arg='민성',...args){
+//let x=[arg,args];
+//let random = Math.floor(Math.random()*x.length);
+//console.log("발표자 : " + x[random]);
+//}
+//f(process.argv.slice(2));
+
+const args = process.argv.slice(2);
+var random = Math.floor(Math.random()*args.length);
+function x(presenters = []) {
+    return presenters[Math.floor(Math.random() * presenters.length)];
+}
+console.log("발표자 : " + getRandomPresenter(args));
+function x(...presenters) {
+    if (presenters.length === 0) {
+        console.log("발표자가 없습니다.");
+        return;
+    }
+    return presenters[Math.floor(Math.random() * presenters.length)];
 }
 
-
+console.log("발표자 : " + x(...args));
 
 
 
